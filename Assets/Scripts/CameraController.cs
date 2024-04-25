@@ -26,7 +26,7 @@ namespace Archer
         {
             // Calcular la posición deseada de la cámara
             Vector3 desiredPosition = target.position - target.forward * distance;
-            desiredPosition += Quaternion.Euler(0, angle, 0) * offset;
+            desiredPosition += Quaternion.Euler(1, angle, 0) * offset;
 
             // Orientar la cámara hacia el objetivo
             Quaternion desiredRotation = Quaternion.LookRotation(target.position - desiredPosition, Vector3.up);
