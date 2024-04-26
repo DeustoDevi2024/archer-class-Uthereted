@@ -48,7 +48,7 @@ namespace Archer
         private IEnumerator Shoot()
         {
 
-
+            animator.SetTrigger("Shoot");
             yield return new WaitForSeconds(0.3f);
 
             // Instanciar una flecha
@@ -67,23 +67,6 @@ namespace Archer
             {
                 arrowRigidbody.AddForce(direction * force, ForceMode.Impulse);
             }
-            else
-            {
-                Debug.LogError("Rigidbody component not found on arrow prefab!");
-            }
-
-
-            // Instanciar una flecha
-
-
-            // Colocar la flecha en el punto de referencia de la mano de la arquera
-
-
-            // Orientar la flecha hacia delante con respecto a la arquera
-
-
-            // Aplicar una fuerza a la flecha para que salga disparada
-
         }
     }
 
